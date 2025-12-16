@@ -13,6 +13,7 @@ public class Main {
             System.out.println("1-Calculadora");
             System.out.println("2-Conversor de temperatura");
             System.out.println("3-Calculadora de area de triangulo");
+            System.out.println("4-Gerar numero aleatório");
             System.out.println("0-Sair");
             opcao = scanner.nextInt();
 
@@ -32,6 +33,11 @@ public class Main {
                 case 3:
                     CalcularAreaTriangulo calcularAreaTriangulo = new CalcularAreaTriangulo();
                     calcularAreaTriangulo.CalculaAreaTriangulo();
+                    break;
+                case 4:
+                    GeradorDeNumeroAleatorio geradorDeNumeroAleatorio = new GeradorDeNumeroAleatorio();
+                    geradorDeNumeroAleatorio.sortear();
+                    break;
                 default:
                     //System.out.println("Operação invalida. Tente novamente");
             }
