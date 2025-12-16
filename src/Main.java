@@ -11,20 +11,29 @@ public class Main {
             System.out.println("|-----------UTILIDADES------------|");
             System.out.println("Escolha uma opção");
             System.out.println("1-Calculadora");
+            System.out.println("2-Conversor de temperatura");
+            System.out.println("3-Calculadora de area de triangulo");
             System.out.println("0-Sair");
             opcao = scanner.nextInt();
 
 
             switch (opcao) {
+                case 0:
+                    System.out.println("Encerrando o programa...");
+                    break;
                 case 1:
                     Calculadora calculadora = new Calculadora();
                     calculadora.iniciarCalculadora();
                     break;
-                case 0:
-                    System.out.println("Encerrando o programa...");
+                case 2:
+                    ConversorTemp conversorTemp = new ConversorTemp();
+                    conversorTemp.conversor();
                     break;
+                case 3:
+                    CalcularAreaTriangulo calcularAreaTriangulo = new CalcularAreaTriangulo();
+                    calcularAreaTriangulo.CalculaAreaTriangulo();
                 default:
-                    System.out.println("Operação invalida. Tente novamente");
+                    //System.out.println("Operação invalida. Tente novamente");
             }
 
         } while (opcao != 0);
